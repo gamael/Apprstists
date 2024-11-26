@@ -94,9 +94,8 @@
 		D949A9F72CF6408A0058934D /* Apprstists */ = {
 			isa = PBXGroup;
 			children = (
-				D949A9F82CF6408A0058934D /* ApprstistsApp.swift */,
-				D949A9FA2CF6408A0058934D /* ContentView.swift */,
-				D949A9FC2CF6408B0058934D /* Assets.xcassets */,
+				D949AA262CF646DA0058934D /* Resources */,
+				D949AA252CF646D10058934D /* Sources */,
 				D949A9FE2CF6408B0058934D /* Preview Content */,
 			);
 			path = Apprstists;
@@ -125,6 +124,47 @@
 				D949AA152CF6408C0058934D /* ApprstistsUITestsLaunchTests.swift */,
 			);
 			path = ApprstistsUITests;
+			sourceTree = "<group>";
+		};
+		D949AA222CF6468A0058934D /* App */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		D949AA232CF646B60058934D /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				D949A9F82CF6408A0058934D /* ApprstistsApp.swift */,
+				D949A9FA2CF6408A0058934D /* ContentView.swift */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		D949AA242CF646BE0058934D /* Data */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		D949AA252CF646D10058934D /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				D949AA242CF646BE0058934D /* Data */,
+				D949AA232CF646B60058934D /* Presentation */,
+				D949AA222CF6468A0058934D /* App */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		D949AA262CF646DA0058934D /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				D949A9FC2CF6408B0058934D /* Assets.xcassets */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

@@ -14,6 +14,14 @@
 		D949AA0A2CF6408C0058934D /* ApprstistsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D949AA092CF6408C0058934D /* ApprstistsTests.swift */; };
 		D949AA142CF6408C0058934D /* ApprstistsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D949AA132CF6408C0058934D /* ApprstistsUITests.swift */; };
 		D949AA162CF6408C0058934D /* ApprstistsUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D949AA152CF6408C0058934D /* ApprstistsUITestsLaunchTests.swift */; };
+		D949AA2D2CF6584C0058934D /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D949AA2C2CF6584C0058934D /* NetworkManager.swift */; };
+		D949AA2F2CF658730058934D /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = D949AA2E2CF658730058934D /* Request.swift */; };
+		D949AA322CF66F200058934D /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = D949AA312CF66F200058934D /* ComposableArchitecture */; };
+		D9A681DF2CF8F36B0081025A /* SearchModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9A681DE2CF8F36B0081025A /* SearchModels.swift */; };
+		D9A681E12CF90E5A0081025A /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9A681E02CF90E5A0081025A /* Configuration.swift */; };
+		D9A681E32CF90FCB0081025A /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9A681E22CF90FCB0081025A /* Repository.swift */; };
+		D9A681E52CF9100A0081025A /* ServiceLocator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9A681E42CF9100A0081025A /* ServiceLocator.swift */; };
+		D9A681E82CF9103D0081025A /* NetworkModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9A681E72CF9103D0081025A /* NetworkModule.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +52,13 @@
 		D949AA0F2CF6408C0058934D /* ApprstistsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ApprstistsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D949AA132CF6408C0058934D /* ApprstistsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApprstistsUITests.swift; sourceTree = "<group>"; };
 		D949AA152CF6408C0058934D /* ApprstistsUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApprstistsUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		D949AA2C2CF6584C0058934D /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		D949AA2E2CF658730058934D /* Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
+		D9A681DE2CF8F36B0081025A /* SearchModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchModels.swift; sourceTree = "<group>"; };
+		D9A681E02CF90E5A0081025A /* Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
+		D9A681E22CF90FCB0081025A /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
+		D9A681E42CF9100A0081025A /* ServiceLocator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceLocator.swift; sourceTree = "<group>"; };
+		D9A681E72CF9103D0081025A /* NetworkModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkModule.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +66,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D949AA322CF66F200058934D /* ComposableArchitecture in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -129,6 +145,10 @@
 		D949AA222CF6468A0058934D /* App */ = {
 			isa = PBXGroup;
 			children = (
+				D9A681E62CF910260081025A /* Modules */,
+				D9A681E02CF90E5A0081025A /* Configuration.swift */,
+				D9A681E22CF90FCB0081025A /* Repository.swift */,
+				D9A681E42CF9100A0081025A /* ServiceLocator.swift */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -145,6 +165,8 @@
 		D949AA242CF646BE0058934D /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				D949AA2B2CF657B90058934D /* Models */,
+				D949AA2A2CF657B10058934D /* Managers */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -167,6 +189,31 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		D949AA2A2CF657B10058934D /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				D949AA2C2CF6584C0058934D /* NetworkManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		D949AA2B2CF657B90058934D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D949AA2E2CF658730058934D /* Request.swift */,
+				D9A681DE2CF8F36B0081025A /* SearchModels.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		D9A681E62CF910260081025A /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				D9A681E72CF9103D0081025A /* NetworkModule.swift */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -183,6 +230,9 @@
 			dependencies = (
 			);
 			name = Apprstists;
+			packageProductDependencies = (
+				D949AA312CF66F200058934D /* ComposableArchitecture */,
+			);
 			productName = Apprstists;
 			productReference = D949A9F52CF6408A0058934D /* Apprstists.app */;
 			productType = "com.apple.product-type.application";
@@ -255,6 +305,9 @@
 				Base,
 			);
 			mainGroup = D949A9EC2CF6408A0058934D;
+			packageReferences = (
+				D949AA302CF66F200058934D /* XCRemoteSwiftPackageReference "swift-composable-architecture" */,
+			);
 			productRefGroup = D949A9F62CF6408A0058934D /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -297,8 +350,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D9A681E32CF90FCB0081025A /* Repository.swift in Sources */,
+				D9A681E12CF90E5A0081025A /* Configuration.swift in Sources */,
+				D949AA2D2CF6584C0058934D /* NetworkManager.swift in Sources */,
+				D949AA2F2CF658730058934D /* Request.swift in Sources */,
+				D9A681E52CF9100A0081025A /* ServiceLocator.swift in Sources */,
+				D9A681E82CF9103D0081025A /* NetworkModule.swift in Sources */,
 				D949A9FB2CF6408A0058934D /* ContentView.swift in Sources */,
 				D949A9F92CF6408A0058934D /* ApprstistsApp.swift in Sources */,
+				D9A681DF2CF8F36B0081025A /* SearchModels.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -622,6 +682,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		D949AA302CF66F200058934D /* XCRemoteSwiftPackageReference "swift-composable-architecture" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pointfreeco/swift-composable-architecture";
+			requirement = {
+				kind = upToNextMinorVersion;
+				minimumVersion = 1.14.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		D949AA312CF66F200058934D /* ComposableArchitecture */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D949AA302CF66F200058934D /* XCRemoteSwiftPackageReference "swift-composable-architecture" */;
+			productName = ComposableArchitecture;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = D949A9ED2CF6408A0058934D /* Project object */;
 }

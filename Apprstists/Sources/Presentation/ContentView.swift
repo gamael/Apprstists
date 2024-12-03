@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    let repo = DiscogsRepository()
+    
     var body: some View {
         VStack {
             Image(systemName: "globe")
@@ -16,7 +19,14 @@ struct ContentView: View {
             Text("Hello, world!")
         }
         .padding()
+        .onAppear(perform: {
+            Task {
+                await repo.searchArtist(searchToken: "stratovarius")
+            }
+
+        })
     }
+        
 }
 
 #Preview {

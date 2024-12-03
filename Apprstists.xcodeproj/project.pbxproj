@@ -22,6 +22,7 @@
 		D9A681E32CF90FCB0081025A /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9A681E22CF90FCB0081025A /* Repository.swift */; };
 		D9A681E52CF9100A0081025A /* ServiceLocator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9A681E42CF9100A0081025A /* ServiceLocator.swift */; };
 		D9A681E82CF9103D0081025A /* NetworkModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9A681E72CF9103D0081025A /* NetworkModule.swift */; };
+		D9A93BB42CFE5862006B374A /* DiscogsModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9A93BB32CFE5862006B374A /* DiscogsModels.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,7 @@
 		D9A681E22CF90FCB0081025A /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
 		D9A681E42CF9100A0081025A /* ServiceLocator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceLocator.swift; sourceTree = "<group>"; };
 		D9A681E72CF9103D0081025A /* NetworkModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkModule.swift; sourceTree = "<group>"; };
+		D9A93BB32CFE5862006B374A /* DiscogsModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscogsModels.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -202,6 +204,7 @@
 			children = (
 				D949AA2E2CF658730058934D /* Request.swift */,
 				D9A681DE2CF8F36B0081025A /* SearchModels.swift */,
+				D9A93BB32CFE5862006B374A /* DiscogsModels.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -354,6 +357,7 @@
 				D9A681E12CF90E5A0081025A /* Configuration.swift in Sources */,
 				D949AA2D2CF6584C0058934D /* NetworkManager.swift in Sources */,
 				D949AA2F2CF658730058934D /* Request.swift in Sources */,
+				D9A93BB42CFE5862006B374A /* DiscogsModels.swift in Sources */,
 				D9A681E52CF9100A0081025A /* ServiceLocator.swift in Sources */,
 				D9A681E82CF9103D0081025A /* NetworkModule.swift in Sources */,
 				D949A9FB2CF6408A0058934D /* ContentView.swift in Sources */,

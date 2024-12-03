@@ -11,7 +11,9 @@ struct Configuration {
     private init() {}
     struct API {
         private init() {}
-        static let defaultFormat = "json"
-        static let apiURL = "https://data.sfgov.org/resource/jjew-r69b.\(defaultFormat)"
+        static let apiURL = "https://api.discogs.com/"
+        static let apiAgentHeader = "Apprstists/1.0"
+        static let key = "fDunvyWMKzmPZOATaRgj"
+        static let secret = "RKRigOoxFZTUmlvxQiEfvFKdEqYXCOaL"
     }
 }

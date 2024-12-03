@@ -31,6 +31,7 @@ class NetworkManagerImpl: NetworkManager {
         guard let urlRequest = createURLRequest(request) else {
             return .failure(.invalid("The request is not valid"))
         }
+        addAdditionalHeaders(request)
         do {
             let decodedObject: R.Response = try await executeRequest(urlRequest, request.responseDecoder)
             return .success(decodedObject)
@@ -49,6 +50,12 @@ class NetworkManagerImpl: NetworkManager {
         }
         let urlRequest = URLRequest(url: url)
         return urlRequest
+    }
+    
+    private func addAdditionalHeaders<R: Request>(_ request: R) {
+        request.headers.forEach { header in
+            urlSession.configuration.httpAdditionalHeaders = header
+        }
     }
     
     private func executeRequest<T: Decodable>(

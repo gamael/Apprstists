@@ -19,6 +19,7 @@ protocol Request {
     var endpoint: String { get }
     var method: RequestMethod { get }
     var params: [String] { get }
+    var headers: [[String: String]] { get }
     var body: Body? { get }
     var bodyEncoder: JSONEncoder { get }
     var responseDecoder: JSONDecoder { get }
@@ -41,5 +42,10 @@ extension Request {
         get {
             return JSONDecoder()
         }
+    }
+    
+    //Hardcoding the header just for compatibility with Discogs
+    var headers: [[String: String]] {
+        return [["User-Agent": Configuration.API.apiAgentHeader]]
     }
 }

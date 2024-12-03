@@ -13,18 +13,16 @@ import Foundation
 //    let cells: [FTInfoTableViewCellViewModel]
 //}
 
-//struct FoodTrucksRequest: Request {
-//
-//    typealias Response = [FoodTruckDTO]
-//    typealias Body = [String : String]
-//    
-//    let endpoint = "?dayorder=%@"
-//    let method: RequestMethod = .get
-//    var params: [String]
-//    let body: Body? = nil
-//}
+struct SearchArtistRequest: Request {
 
-
+    typealias Response = TestDTO
+    typealias Body = [String : String]
+    
+    let endpoint = "database/search?q=%@&type=artist&key=%@&secret=%@"
+    let method: RequestMethod = .get
+    var params: [String]
+    let body: Body? = nil
+}
 
 //struct FoodTruck {
 //    let name: String
@@ -46,19 +44,27 @@ import Foundation
 //}
 
 
-//struct FoodTruckDTO: Decodable {
-//    let applicant: String
-//    let location: String
-//    let locationdesc: String?
-//    let optionaltext: String?
-//    let latitude: String
-//    let longitude: String
-//    let dayorder: String
-//    let starttime: String
-//    let endtime: String
-//    let start24: String
-//    let end24: String
-//
+struct ArtistDTO: Decodable {
+    let id: Int
+    let type: String
+    let masterID: String?
+    let masterUrl: String?
+    let thumb: String
+    let coverImage: String
+    let resourceURL: String
+    
+    enum CodingKeys: String, CodingKey {
+        case id
+        case type
+        case masterID = "master_id"
+        case masterUrl = "master_url"
+        case thumb
+        case coverImage = "cover_image"
+        case resourceURL = "resource_url"
+        
+    }
+    
+
 //    func toEntity() -> FoodTruck {
 //        return .init(
 //            name: applicant,
@@ -69,4 +75,9 @@ import Foundation
 //            longitude: Double(longitude) ?? 0.0
 //        )
 //    }
-//}
+}
+
+struct TestDTO: Decodable {
+    let pagination: Pagination
+    let results: [ArtistDTO]
+}
